@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Notes</title>
+
+    <script src="https://polyfill.io/v3/polyfill.js?features=es6"></script>
+
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/text.css">
+</head>
+<body>
+    <main class="main">
+        <img src="img/wallpaper.jpg" alt="Image of Notebook" class="wallpaper">
+        <h2 id="title">Mis Notas</h2>
+    </main>
+
+    <div class="section" paper="Teoría de conjuntos"></div>
+    <!--<div class="section" paper="Aritmetica Elemental"></div>-->
+
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    document.querySelectorAll('.section').forEach(element => {
+
+        let paper = element.getAttribute('paper').replace(/\s/g, '_');
+
+        $.get('papers/' + paper + '.html', (data, status) => {
+            element.innerHTML = data;
+        });
+    });
+</script>
+
+<script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+</html>
