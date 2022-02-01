@@ -1,0 +1,2 @@
+<div class="subtitle">Aritmetica Elemental</div>
+<div class="box"><strong>Def:</strong> La aritmética elemental es la parte simplificada de la aritmética que incluye las operaciones de suma, resta, multiplicación y división.</div>

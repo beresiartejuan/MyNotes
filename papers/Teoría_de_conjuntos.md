@@ -1,0 +1,2 @@
+<div class="subtitle">Teoría de conjuntos</div>
+<div class="box"><strong>Def:</strong> La teoría de conjuntos es una rama de las matemáticas y de la lógica que se dedica a estudiar las características de los conjuntos y las operaciones que pueden efectuarse entre ellos.</div>
