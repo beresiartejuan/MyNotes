@@ -1,0 +1,53 @@
+h1{
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    font-weight: 500;
+    font-size: large;
+}
+
+#title{
+    position: absolute;
+
+    top: 1.5vh;
+    left: 10%;
+    right: 10%;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    font-size:x-large;
+}
+
+.title {
+
+    width: 100%;
+    height: 100%;
+
+    display: inline-block;
+
+    margin: 4vh 0 4vh 0;
+    padding: 0 4vw 0 4vw;
+
+    border-left: solid rgba(0, 0, 0, .8);
+
+    font-weight: 800;
+    font-size: xx-large;
+
+}
+
+.subtitle {
+
+    width: 100%;
+    height: 100%;
+
+    display: inline-block;
+
+    margin: 1vh 0 1vh 0;
+    padding: 0 2vw 0 0;
+
+    font-weight: 500;
+    font-size: xx-large;
+    text-decoration: underline;
+}
