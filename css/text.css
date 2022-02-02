@@ -9,11 +9,13 @@ p {
 }
 
 #title{
-    margin: 0 auto;
-    padding: 1.5rem;
+
+    width: 100%;
+
+    margin: 1rem auto 1.5rem auto;
 
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 900;
+    font-weight: 800;
     font-size:xx-large;
 }
 
