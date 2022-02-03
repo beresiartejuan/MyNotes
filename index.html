@@ -7,34 +7,45 @@
 
     <title>My Notes</title>
 
-    <script src="https://polyfill.io/v3/polyfill.js?features=es6"></script>
-
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/text.css">
 </head>
 <body>
-    <main>
-        <center><h1 id="title">Nuestros Apuntes</h1></center>
+    <main class="main">
+        <h1 id="title" class="disable-select">Matemáticas desde cero</h1>
     </main>
+    <div id="index">
+        <div class="title">Índice</div>
+    </div>
 
-    <div class="section" paper="Teoría de conjuntos"></div>
-    <!--<div class="section" paper="Aritmetica Elemental"></div>-->
+    <div class="section" id="Teoría_de_conjuntos"></div>
+    <div class="section" id="Aritmetica_Elemental"></div>
+    <div class="section" id="Algebrá"></div>
+    <div class="section" id="Combinatoria"></div>
 
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     document.querySelectorAll('.section').forEach(element => {
 
-        let paper = element.getAttribute('paper').replace(/\s/g, '_');
+        let paper = element.getAttribute('id');
+
+        let index = document.getElementById('index');
+        let point = document.createElement('li');
+        point.type = "1";
+
+        let link = document.createElement('a');
+        point.classList.add('item');
+        link.innerText = paper.replace(/\_/g, ' ');
+        link.href = "#" + paper;
+
+        point.appendChild(link);
+        index.appendChild(point);
 
         $.get('papers/' + paper + '.html', (data, status) => {
             element.innerHTML = data;
         });
     });
-</script>
-
-<script id="MathJax-script" async
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 </script>
 </html>
