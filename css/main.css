@@ -7,8 +7,14 @@ body{
     padding-bottom: 2vh;
 }
 
-img{
-    max-width: 40vw;
+img {
+    width: 20vw;
+}
+
+.img {
+    padding: 1rem;
+    width: 100%;
+    overflow-x: scroll;
 }
 
 .main {
